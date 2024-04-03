@@ -54,6 +54,7 @@ function QuotesProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       // const res = await fetch("http://localhost:5000");
+      // const res = await fetch("https://backendserver-production-af63.up.railway.app");
       const res = await fetch("https://backendserver-production-af63.up.railway.app");
       //console.log("res", res.json());
       const data = await res.json();
@@ -77,8 +78,9 @@ function QuotesProvider({ children }) {
   async function getQuotesFromKeyword(keyword) {
     dispatch({ type: "loading" });
     try {
-      const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
+      // const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
       // const url = `http://localhost:5000/${keyword}`;
+      const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
       console.log("Context url", url);
       const res = await fetch(url);
 
