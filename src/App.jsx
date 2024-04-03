@@ -16,7 +16,7 @@ import GlobalStyles from "../src/styles/GlobalStyles";
 import { QueryClientProvider } from "@tanstack/react-query";
 // // import {QueryCLient}
 // import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+//simport { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./ui/ProtectedRoute";
