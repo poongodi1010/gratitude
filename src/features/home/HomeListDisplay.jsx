@@ -51,7 +51,7 @@ function HomeListDisplay({ post }) {
           <Link
             to={`/blogDetails/${post.sys.id}`}
             onClick={() => setIsExpanded((exp) => !exp)}
-            className="cursor-pointer"
+            className="lg:cursor-pointer"
           >
             {arrayOfContent.length > 14
               ? isExpanded
