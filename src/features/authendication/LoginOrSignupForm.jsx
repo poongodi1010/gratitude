@@ -12,7 +12,7 @@ function LoginOrSignupForm() {
   
   return (
     <div className="m-auto grid h-full w-1/2 grid-cols-[65%_65%] items-center justify-center pt-24 ">
-      <div className="h-full items-center rounded-xl border-[1px] border-gray-900 bg-[url('cherry.jpg')] bg-cover px-32 ">
+      <div className="h-full items-center rounded-xl border-[1px] border-gray-900 bg-[url('./public/cherry.jpg')] bg-cover px-32 ">
         <h1 className="pt-24 text-center font-sans text-3xl font-bold">
           Welcome to the world of{" "}
           <span className="text-5xl leading-[60px]"> Gratitude!</span>
