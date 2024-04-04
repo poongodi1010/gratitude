@@ -19,7 +19,8 @@ function SingleListDisplay({ singleBlogPost }) {
             <HiArrowLeft className="float-left mx-2 my-1 text-3xl font-bold " />
             Back
           </Link>
-          <div className=" relative m-auto grid h-full w-1/2 items-center justify-center sm:w-full sm:items-start">
+          {/* <div className=" relative m-auto grid h-full w-1/2 items-center justify-center sm:w-full sm:items-start"> */}
+          <div className=" relative m-auto grid h-full w-1/2 items-center justify-center">
             <header>
               <img
                 src={singleBlogPost?.fields?.blogImage?.fields?.file?.url}

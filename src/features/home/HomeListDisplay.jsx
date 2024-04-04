@@ -7,7 +7,8 @@ function HomeListDisplay({ post }) {
   const arrayOfContent = post.fields.blogSummary.trim().split(/\s+/);
   return (
     <section key={post.sys.id} className="  m-auto grid grid-cols-1  pb-2  ">
-      <div className=" items-center justify-center sm:-z-50 sm:w-full sm:items-start lg:relative lg:m-auto lg:grid lg:h-full lg:w-1/2">
+      {/* <div className=" items-center justify-center sm:-z-50 sm:w-full sm:items-start lg:relative lg:m-auto lg:grid lg:h-full lg:w-1/2"> */}
+      <div className=" relative m-auto grid h-full w-1/2 items-center justify-center">
         <header>
           <img
             src={post.fields.blogImage.fields.file.url}
@@ -51,7 +52,7 @@ function HomeListDisplay({ post }) {
           <Link
             to={`/blogDetails/${post.sys.id}`}
             onClick={() => setIsExpanded((exp) => !exp)}
-            className="lg:cursor-pointer"
+            className="cursor-pointer"
           >
             {arrayOfContent.length > 14
               ? isExpanded
