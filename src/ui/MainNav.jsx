@@ -56,7 +56,8 @@ function MainNav() {
   return (
     <nav>
       <div>
-        <ul className="max-[424px]:flex max-[424px]:flex-row max-[424px]:gap-[2px]  max-[424px]:text-[1rem] sm:flex sm:flex-row sm:gap-[15px] lg:flex lg:flex-row lg:gap-[0.2rem] lg:py-6 lg:pl-32 lg:font-[PT-serif]  lg:text-3xl lg:font-bold  ">
+        {/* <ul className="max-[424px]:flex max-[424px]:flex-row max-[424px]:gap-[2px]  max-[424px]:text-[1rem] sm:flex sm:flex-row sm:gap-[15px] lg:flex lg:flex-row lg:gap-[0.2rem] lg:py-6 lg:pl-32 lg:font-[PT-serif]  lg:text-3xl lg:font-bold  "> */}
+        <ul className="mt-3 flex flex-row gap-[0.2rem] py-6 pl-32  font-[PT-serif] text-3xl font-bold ">
           {/* <li>
           <NavLink to="/home" className="link">
             {/* <HiOutlineHome /> 
@@ -64,10 +65,7 @@ function MainNav() {
           </NavLink>
         </li> */}
           <li>
-            <NavLink
-              to="/gratitude"
-              className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
-            >
+            <NavLink to="/gratitude" className="link p-8">
               {/* <HiOutlineCalendarDays /> */}
               <span>Gratitude</span>
             </NavLink>
@@ -75,35 +73,27 @@ function MainNav() {
           <li>
             <NavLink
               to="/affirmation"
-              className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
+              // className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
+              className="link p-8"
             >
               {/* <HiOutlineHomeModern /> */}
               <span>Affirmation</span>
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/quotes"
-              className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
-            >
+            <NavLink to="/quotes" className="link p-8">
               {/* <HiOutlineUsers /> */}
               <span>Quotes</span>
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/todolist"
-              className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
-            >
+            <NavLink to="/todolist" className="link p-8">
               {/* <HiOutlineCog6Tooth /> */}
               <span>ToDo List</span>
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/peptalk"
-              className="lg:link max-[424px]:p-1 sm:px-4 lg:p-8"
-            >
+            <NavLink to="/peptalk" className="link p-8">
               {/* <HiOutlineCog6Tooth /> */}
               <span>PepTalk</span>
             </NavLink>

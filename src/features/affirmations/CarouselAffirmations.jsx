@@ -45,7 +45,7 @@ function CarouselAffirmations({ affirm }) {
     // </div>
     // <p>{affirm.affirmations}</p>
     <>
-      <div className=" overflow-hidden py-24 text-center max-[424px]:py-0 ">
+      <div className=" overflow-hidden py-24 text-center  ">
         <Slider ref={setSliderRef} {...sliderSettings}>
           {/* <ul> */}
           {affirm.slice(0, 10).map((element) => (
@@ -58,7 +58,7 @@ function CarouselAffirmations({ affirm }) {
       </div>
       <div className="flex items-center justify-center ">
         <button
-          className="m-8 h-28 w-28 rounded-xl border-2 border-red-100 p-4 text-red-900 !outline-none hover:shadow-xl max-[424px]:m-2"
+          className="m-8 h-28 w-28 rounded-xl border-2 border-red-100 p-4 text-red-900 !outline-none hover:shadow-xl "
           onClick={sliderRef?.slickPrev}
           //disabled={`${count === 1}`}
         >

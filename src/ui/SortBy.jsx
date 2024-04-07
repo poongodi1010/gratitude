@@ -9,7 +9,7 @@ function SortBy({ options }) {
     setSearchParams(searchParams);
   }
   return (
-    <div className=" my-6 grid items-center rounded-xl bg-[#43766C]  px-2  py-4  sm:w-1/2 sm:py-0 sm:text-xl lg:w-full">
+    <div className=" my-6 grid w-full items-center rounded-xl  bg-[#43766C]  px-2  py-4">
       <select
         onChange={handleChange}
         value={sortBy}

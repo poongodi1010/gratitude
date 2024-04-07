@@ -19,7 +19,7 @@ function Logo() {
   return (
     <div>
       <img
-        className="my-8 flex h-20 w-auto cursor-pointer justify-start"
+        className="my-10 flex h-20 w-auto cursor-pointer justify-start"
         src="/logo.jpg"
         alt="Logo"
         onClick={() => navigate(`/home`)}

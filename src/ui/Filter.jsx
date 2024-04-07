@@ -20,14 +20,14 @@ function Filter({ filterField, options }) {
 
   return (
     // <div className="  flex w-full justify-around   rounded-xl  px-2 py-2">
-    <div className=" flex  w-full items-center rounded-xl px-2    sm:px-0 ">
+    <div className=" flex  w-full items-center rounded-xl px-2    ">
       {options.map((option) => (
         <button
           key={options.value}
           onClick={() => handleClick(option.value)}
           //   active={currentFilter === option.value}
           disabled={currentFilter === option.value}
-          className="mx-2 my-6 rounded-2xl bg-[#43766C] px-8 py-6 text-white hover:bg-[#2d5f55] hover:shadow-xl sm:mx-1 sm:px-5 sm:text-xl  "
+          className="mx-2 my-6 rounded-2xl bg-[#43766C] px-8 py-6 text-white hover:bg-[#2d5f55] hover:shadow-xl   "
         >
           {option.label}
         </button>

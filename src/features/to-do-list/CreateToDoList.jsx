@@ -40,7 +40,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
     <div>
       <h1 className=" mt-1 text-center text-3xl">To Do List</h1>
       <form
-        className=" m-4 my-8  grid grid-cols-[15%_50%_20%] sm:grid-cols-[18%_50%_25%]"
+        className=" m-4 my-8  grid grid-cols-[15%_50%_20%] "
         onSubmit={handleSubmit(onSubmit, onError)}
       >
         <label htmlFor="tasks" className="mr-2 px-4 pt-8 text-left text-2xl">
@@ -51,7 +51,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
           name="text"
           id="tasks"
           placeholder="What would you like to do..."
-          className="my-4 mr-8 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75 sm:w-[70%] "
+          className="my-4 mr-8 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75  "
           {...register("tasks", {
             required: "Please enter task ",
           })}
@@ -65,7 +65,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
         <input
           type="date"
           id="deadline"
-          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75 sm:w-[70%] "
+          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75  "
           {...register("deadline", {
             required: "Deadline is required",
           })}
@@ -82,7 +82,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
         <select
           id="priority"
           name="priority"
-          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-8 py-4 text-2xl !outline-none transition-all duration-75 sm:w-[70%]"
+          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-8 py-4 text-2xl !outline-none transition-all duration-75 "
           {...register("priority", {
             required: "This field is required",
           })}
@@ -101,7 +101,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
         <select
           id="status"
           name="status"
-          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-8 py-4 text-2xl !outline-none transition-all duration-75 sm:w-[70%]"
+          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-8 py-4 text-2xl !outline-none transition-all duration-75 "
           {...register("status", {
             required: "This field is required",
           })}
@@ -119,7 +119,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
         <input
           type="date"
           id="date"
-          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75 sm:w-[70%]"
+          className="my-4 w-1/2 rounded-2xl border-2 border-gray-600 px-6 py-4 text-2xl !outline-none transition-all duration-75 "
           {...register("date", {
             required: "date is required",
           })}

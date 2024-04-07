@@ -10,7 +10,7 @@ function KeywordQuotes({ keyword }) {
   }
   return (
     <div
-      className="m-4 cursor-pointer rounded-xl border-2 p-8 text-center capitalize hover:bg-gray-200 hover:text-black hover:shadow-xl max-[424px]:m-2"
+      className="m-4 cursor-pointer rounded-xl border-2 p-8 text-center capitalize hover:bg-gray-200 hover:text-black hover:shadow-xl "
       onClick={handleClick}
     >
       {" "}

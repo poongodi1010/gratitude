@@ -8,17 +8,12 @@ function DailyQuote() {
     fetchDailyQuotes();
   }, []);
 
-  console.log("qyote", quotes);
   return (
-    <div className="w-[80%]  text-center max-[424px]:w-full  ">
+    <div className="w-[80%]  text-center   ">
       {quotes.map((q) => (
         <>
-          <h2 className="py-4 text-4xl uppercase max-[424px]:px-2 max-[424px]:py-[0.4rem] max-[424px]:text-[1.7rem]">
-            {q.q}
-          </h2>
-          <p className="text-md max-[424px]:p-2 max-[424px]:text-[1.3rem] ">
-            - {q.a}
-          </p>
+          <h2 className="py-4 text-4xl uppercase ">{q.q}</h2>
+          <p className="text-md  ">- {q.a}</p>
         </>
       ))}
     </div>

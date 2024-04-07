@@ -24,7 +24,7 @@ function ToDoDetail() {
               ToDo List #{list.id}
             </h2>
             <span className=" flex items-end justify-end">
-              <p className="m-4 rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold capitalize text-white md:text-center ">
+              <p className="m-4 rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold capitalize text-white  ">
                 {list.status}
               </p>
               <p className="m-4 rounded-xl bg-red-400  px-6 py-2 font-sans text-2xl font-semibold capitalize text-white">
@@ -42,7 +42,7 @@ function ToDoDetail() {
               <span className="mr-2">Deadline - </span> {list.deadline}
             </p>
           </section>
-          <div className="mt-14 grid  grid-cols-[12%_10%] justify-start gap-[90rem] sm:gap-[40rem]">
+          <div className="mt-14 grid  grid-cols-[12%_10%] justify-start gap-[90rem] ">
             {list.status === "new" && (
               <button
                 // onClick={() => editStatus(toDoId, status)}
@@ -53,7 +53,7 @@ function ToDoDetail() {
                   })
                 }
                 disabled={isEditing || isLoading}
-                className="m-4 rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 sm:w-full sm:px-2"
+                className="m-4 rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 "
               >
                 In Progress
               </button>
@@ -67,14 +67,14 @@ function ToDoDetail() {
                   })
                 }
                 disabled={isEditing || isLoading}
-                className="m-4  rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 sm:w-full sm:px-2"
+                className="m-4  rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 "
               >
                 Done
               </button>
             )}
             <button
               onClick={() => navigate(-1)}
-              className="m-4  rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 sm:w-full sm:px-2"
+              className="m-4  rounded-xl bg-red-400 px-6 py-2 font-sans text-2xl font-semibold text-white hover:bg-red-700 "
             >
               Back
             </button>

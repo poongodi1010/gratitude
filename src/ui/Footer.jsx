@@ -14,10 +14,8 @@ function Footer() {
     futureDate1.push(format(addDays(currentDate, i), "yyyy-MM-dd"));
   }
 
-  console.log("futuredate1", futureDate1);
-
   return (
-    <footer >
+    <footer>
       <ToDoFooter dates={futureDate1} />
     </footer>
   );

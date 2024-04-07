@@ -6,7 +6,7 @@ function AddToDo() {
     <div>
       <Modal>
         <Modal.Open opens="todo-form">
-          <button className=" my-6 grid w-full items-center rounded-xl  bg-[#43766C]  px-4 py-6 text-white max-[424px]:w-full max-[424px]:px-[0.5rem] max-[424px]:text-sm sm:w-fit sm:px-4 sm:py-6 sm:text-xl">
+          <button className=" my-6 grid w-full items-center rounded-xl  bg-[#43766C]  px-4 py-6 text-white ">
             Add ToDo Task
           </button>
         </Modal.Open>
