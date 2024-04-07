@@ -10,7 +10,7 @@ import CreateGratitudeEntry from "./CreateGratitudeEntry";
 function AddGratitude() {
   return (
     <div>
-      <div className="mb-1  grid w-full rounded-lg  bg-[url(`/banner1.jpg')] bg-cover px-2 py-6 ">
+      <div className="mb-1  grid w-full rounded-lg  bg-[url('/banner1.jpg')] bg-cover px-2 py-6 ">
         <pre className=" flex items-center justify-center text-center font-serif text-[#12372A]  ">
           {`Acknowledging the good that\nyou already have in your life\nis the foundation for all abundance.!`}
         </pre>
