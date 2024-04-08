@@ -19,8 +19,8 @@ function Logo() {
   return (
     <div>
       <img
-        className="my-10 flex h-20 w-auto cursor-pointer justify-start"
-        src="/logo.jpg"
+        className="mt-4 flex h-[80%] w-full  cursor-pointer justify-start rounded-[50%] shadow-2xl"
+        src="/logo6.jpeg"
         alt="Logo"
         onClick={() => navigate(`/home`)}
       />

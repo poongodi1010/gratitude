@@ -14,10 +14,10 @@ function AppLayout() {
             <Outlet />
           </div>
         </main>
-        <footer className="sticky py-3">
-          <AppFooter />
-        </footer>
       </div>
+      <footer className="sticky py-3">
+        <AppFooter />
+      </footer>
     </>
   );
 }
