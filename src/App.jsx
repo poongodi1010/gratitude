@@ -26,6 +26,7 @@ import { UserProvider } from "./features/authendication/UserContext";
 import KeywordQuotesDisplay from "./features/quotes/KeywordQuotesDisplay";
 import { QuotesProvider } from "./context/QuotesContext";
 import SingleList from "./features/home/SingleList";
+import { WindowProvider } from "./context/WindowContext";
 //import UserDetails from "./features/authendication/UserDetails";
 //import UpdatePassword from "./features/authendication/UpdatePassword";
 //import UserUpdate from "./features/authendication/UserUpdate";
@@ -48,52 +49,56 @@ function App() {
     <QueryClientProvider client={queryClient}>
       {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       <GlobalStyles />
+
       <UserProvider>
-        <QuotesProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route
-                element={
-                  <ProtectedRoute>
-                    <AppLayout />
-                  </ProtectedRoute>
-                }
-              >
-                <Route index element={<Navigate replace to="home" />} />
-                {/* <Route path="signup" element={<Users />} /> */}
-                <Route path="home" element={<HomePage />} />
-                <Route path="/blogDetails/:id" element={<SingleList />} />
-
-                <Route path="gratitude" element={<Gratitude />} />
-
-                <Route path="affirmation" element={<Affirmation />} />
-                <Route path="peptalk" element={<PepTalk />} />
-                <Route path="quotes" element={<Quotes />} />
-                <Route path="todolist" element={<ToDoList />} />
-                {/* <Route path="todo/:date" element={<ToDoTable />} /> */}
-                <Route path="todolist/:id" element={<ToDoStatusChange />} />
-                {/* <Route path="list/:date" element={<ToDoList />} /> */}
+        <WindowProvider>
+          <QuotesProvider>
+            <BrowserRouter>
+              <Routes>
                 <Route
-                  path="quotes/:keyword"
-                  element={<KeywordQuotesDisplay />}
-                />
-                <Route path="account" element={<Account />} />
-                {/* <Route path="account/account" element={<UserUpdate />} />
+                  element={
+                    <ProtectedRoute>
+                      <AppLayout />
+                    </ProtectedRoute>
+                  }
+                >
+                  <Route index element={<Navigate replace to="home" />} />
+                  {/* <Route path="signup" element={<Users />} /> */}
+                  <Route path="home" element={<HomePage />} />
+                  <Route path="/blogDetails/:id" element={<SingleList />} />
+
+                  <Route path="gratitude" element={<Gratitude />} />
+
+                  <Route path="affirmation" element={<Affirmation />} />
+                  <Route path="peptalk" element={<PepTalk />} />
+                  <Route path="quotes" element={<Quotes />} />
+                  <Route path="todolist" element={<ToDoList />} />
+                  {/* <Route path="todo/:date" element={<ToDoTable />} /> */}
+                  <Route path="todolist/:id" element={<ToDoStatusChange />} />
+                  {/* <Route path="list/:date" element={<ToDoList />} /> */}
+                  <Route
+                    path="quotes/:keyword"
+                    element={<KeywordQuotesDisplay />}
+                  />
+                  <Route path="account" element={<Account />} />
+                  {/* <Route path="account/account" element={<UserUpdate />} />
                 <Route path="account/changePassword" element={<UserUpdate />} /> */}
 
-                {/* <Route path="login" element={<Login />} /> */}
-                <Route
-                  path="gratitude/:gratitudeId"
-                  element={<GratitudeView />}
-                />
-                <Route path="*" element={<PageNotFound />} />
-              </Route>
-              <Route path="signup" element={<Users />} />
-              <Route path="login" element={<Users />} />
-            </Routes>
-          </BrowserRouter>
-        </QuotesProvider>
+                  {/* <Route path="login" element={<Login />} /> */}
+                  <Route
+                    path="gratitude/:gratitudeId"
+                    element={<GratitudeView />}
+                  />
+                  <Route path="*" element={<PageNotFound />} />
+                </Route>
+                <Route path="signup" element={<Users />} />
+                <Route path="login" element={<Users />} />
+              </Routes>
+            </BrowserRouter>
+          </QuotesProvider>
+        </WindowProvider>
       </UserProvider>
+
       <Toaster
         position="top-center"
         gutter={12}

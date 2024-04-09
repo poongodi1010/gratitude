@@ -64,9 +64,9 @@ import { createPortal } from "react-dom";
 
 const ModalContext = createContext();
 
-function Modal({ children }) {
+function Modal({ children, width }) {
   const [openName, setOpenName] = useState("");
-
+  console.log("wid", width);
   const close = () => setOpenName("");
   const open = setOpenName;
 
@@ -112,7 +112,7 @@ function Window({ children, name }) {
     <div className="fixed left-0 top-0 z-[1000] h-screen w-full backdrop-blur-sm  transition-all duration-500">
       <div
         ref={ref}
-        className="fixed left-[50%] top-[40%]   w-4/5  -translate-x-[50%] -translate-y-[50%] bg-blue-200  p-4 transition-all duration-500"
+        className="fixed left-[50%] top-[40%]  w-4/5 -translate-x-[50%] -translate-y-[50%]  bg-blue-200  p-4 transition-all duration-500  max-[767px]:left-[30%] max-[767px]:w-3/4 max-[767px]:-translate-x-[30%]"
       >
         <button
           onClick={close}

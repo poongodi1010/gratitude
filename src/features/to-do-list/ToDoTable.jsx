@@ -9,7 +9,7 @@ function ToDoTable() {
 
   return (
     <div className="my-12 ">
-      <header className="grid grid-cols-7 justify-center py-4 text-2xl font-bold uppercase text-black ">
+      <header className=" grid grid-cols-7 justify-center py-4 text-2xl font-bold uppercase text-black ">
         <div className="text-center">
           {/* <label htmlFor="checkbox"></label>
           <input type="checkbox" id="checkbox" /> */}

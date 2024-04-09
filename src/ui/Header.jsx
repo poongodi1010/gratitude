@@ -30,7 +30,7 @@ function Header() {
   return (
     <>
       {/* // <header className=" border-b-2 border-b-black bg-[url(`/cherry.jpg`)] bg-cover  px-[4.8rem] max-[424px]:p-0  sm:gap-[0.1rem] sm:px-0 sm:py-4 lg:flex lg:h-[110px] lg:items-center lg:gap-[0.4rem] lg:overflow-hidden  "> */}
-      <header className=" overflox-x-scroll flex h-[110px] items-center gap-[0.4rem] border-b-2 border-b-black bg-[url('/banner11.jpeg')] bg-cover px-[4.8rem] lg:overflow-hidden  ">
+      <header className="  flex h-[110px] items-center gap-[0.4rem] overflow-hidden border-b-2 border-b-black bg-[url('/banner11.jpeg')] bg-cover px-[4.8rem]  ">
         {/* <UserAvatar /> */}
         <SideBar />
         <HeaderMenu setIsVisisble={setIsVisisble} isVisible={isVisible} />
