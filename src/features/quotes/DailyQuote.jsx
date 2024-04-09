@@ -12,7 +12,9 @@ function DailyQuote() {
     <div className="w-[80%]  text-center   ">
       {quotes.map((q) => (
         <>
-          <h2 className="py-4 text-4xl uppercase ">{q.q}</h2>
+          <h2 className="py-4 text-4xl uppercase max-[767px]:text-2xl">
+            {q.q}
+          </h2>
           <p className="text-md  ">- {q.a}</p>
         </>
       ))}

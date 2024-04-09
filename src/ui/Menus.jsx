@@ -100,7 +100,7 @@ function Toggle({ id }) {
   return (
     <button
       onClick={handleClick}
-      className="translate-x-3.5 rounded-md p-[0.4rem] transition-all duration-200"
+      className="translate-x-3.5 rounded-md p-[0.4rem] transition-all  duration-200 max-[767px]:py-0"
     >
       <HiEllipsisVertical className="h-[1.6rem] w-[1.6rem] text-gray-900  transition-all duration-500" />
     </button>

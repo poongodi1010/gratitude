@@ -20,23 +20,23 @@
 function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
   console.log("name", resourceName);
   return (
-    <div className="flex w-[100rem] flex-col gap-5 font-sans sm:flex sm:w-full ">
+    <div className="flex w-[100rem] flex-col gap-5 font-sans max-[767px]:w-full ">
       <h3 className="font-bold">Delete {resourceName}</h3>
-      <p className="color-grey-500 sm: mb-[1.2rem]">
+      <p className="color-grey-500 max-[767px]:text-[1.4rem]">
         Are you sure you want to delete this {resourceName} permanently? This
         action cannot be undone.
       </p>
 
-      <div className="flex justify-end sm:items-end gap-5">
+      <div className="flex justify-end gap-5 max-[767px]:items-end">
         <button
-          className="m-2 rounded-lg border-2 bg-white p-4 text-2xl font-medium text-gray-600 hover:text-gray-900"
+          className="m-2 rounded-lg border-2 bg-white p-4 text-2xl font-medium text-gray-600 hover:text-gray-900 max-[767px]:text-[1.35rem]"
           disabled={disabled}
           onClick={onCloseModal}
         >
           Cancel
         </button>
         <button
-          className="m-2 rounded-lg bg-red-700 p-4 text-2xl font-medium text-red-200 hover:text-red-800"
+          className="m-2 rounded-lg bg-red-700 p-4 text-2xl font-medium text-red-200 hover:text-red-800 max-[767px]:text-[1.35rem]"
           disabled={disabled}
           onClick={onConfirm}
         >

@@ -8,16 +8,16 @@ function ToDoTableForSmall() {
   const { toDoList = [] } = useToDoList();
 
   return (
-    <div className="my-12 ">
-      <header className=" grid grid-cols-6 justify-center py-4 text-2xl font-bold uppercase text-black ">
+    <div className="my-4 ">
+      <header className=" grid grid-cols-[6.5fr_5fr_4fr_4fr_1fr] justify-center px-4 py-4 text-[0.9rem] font-semibold uppercase text-black ">
         {/* <div className="hidden text-center">
           {/* <label htmlFor="checkbox"></label>
             <input type="checkbox" id="checkbox" /> *
         </div> */}
-        <div className=" hidden text-center">Task</div>
-        <div className=" hidden text-center">Deadline</div>
-        <div className="hidden text-center">Priority</div>
-        <div className="hidden text-center">Status</div>
+        <div className="pl-2">Task</div>
+        <div className="pl-2">Deadline</div>
+        <div className=" pl-6 max-[374px]:pl-2">Priority</div>
+        <div className="pl-6 max-[374px]:pl-2">Status</div>
         <div className="hidden text-center">Date</div>
         <div></div>
       </header>

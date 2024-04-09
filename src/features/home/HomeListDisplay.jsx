@@ -7,8 +7,7 @@ function HomeListDisplay({ post }) {
   const arrayOfContent = post.fields.blogSummary.trim().split(/\s+/);
   return (
     <section key={post.sys.id} className="  m-auto grid grid-cols-1  pb-2  ">
-    
-      <div className=" relative m-auto grid h-full w-1/2 items-center justify-center">
+      <div className=" relative m-auto grid h-full w-1/2 items-center justify-center max-[767px]:w-full max-[767px]:px-4">
         <header>
           <img
             src={post.fields.blogImage.fields.file.url}

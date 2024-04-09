@@ -3,7 +3,7 @@ import Modal from "../../ui/Modal";
 
 import Menus from "../../ui/Menus";
 import { HiEye, HiPencil, HiTrash } from "react-icons/hi2";
-import CreateToDoList from "./CreateToDoList";
+import CreateToDoListForSmall from "./CreateToDoListForSmall";
 import { useNavigate } from "react-router-dom";
 //import { useState } from "react";
 //import { useEditToDoStatus } from "./useEditToDoStatus";
@@ -34,7 +34,7 @@ function ToDoRowForSmall({ list }) {
 
   return (
     <div
-      className={`mt-4 grid grid-cols-[7.5fr_5fr_2fr_3fr_1fr] justify-center px-4 text-[1rem] capitalize text-black `}
+      className={`mt-4 grid grid-cols-[6.5fr_5fr_4fr_4fr_1fr] justify-center px-4 text-[0.9rem] capitalize text-black `}
     >
       <div className="mx-2">
         <h2>{list.tasks}</h2>
@@ -42,10 +42,10 @@ function ToDoRowForSmall({ list }) {
       <div>
         <h2>{list.deadline}</h2>
       </div>
-      <div className="mx-2">
+      <div className=" text-center">
         <h2>{list.priority}</h2>
       </div>
-      <div>
+      <div className=" text-center">
         <h2>
           {list.status}
           {/* <label htmlFor="status"></label>
@@ -89,7 +89,7 @@ function ToDoRowForSmall({ list }) {
 
             <Modal.Window name="edit">
               {/* //{editSession && <CreateGratitudeEntry gratitudeToEdit={grat} />} */}
-              <CreateToDoList toDoToEdit={list} />
+              <CreateToDoListForSmall toDoToEdit={list} />
             </Modal.Window>
 
             <Modal.Window name="delete">

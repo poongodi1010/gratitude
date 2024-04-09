@@ -45,7 +45,7 @@ function QuotesByKeyword() {
     //   <div>Success</div>
     //   {keywordQuote.map((quote) => quote.q)} */}
     // </div>
-    <div className="grid grid-cols-3 grid-rows-3  ">
+    <div className="grid grid-cols-3 grid-rows-3 max-[767px]:grid-cols-[5fr_5fr] ">
       {keywords.map((word) => (
         <KeywordQuotes keyword={word.keyword} key={word.id} />
       ))}

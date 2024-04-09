@@ -20,7 +20,7 @@ function SingleListDisplay({ singleBlogPost }) {
             Back
           </Link>
           {/* <div className=" relative m-auto grid h-full w-1/2 items-center justify-center sm:w-full sm:items-start"> */}
-          <div className=" relative m-auto grid h-full w-1/2 items-center justify-center">
+          <div className=" relative m-auto grid h-full w-1/2 items-center justify-center max-[767px]:w-full max-[767px]:px-4">
             <header>
               <img
                 src={singleBlogPost?.fields?.blogImage?.fields?.file?.url}
