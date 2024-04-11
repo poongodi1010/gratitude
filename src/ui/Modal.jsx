@@ -109,10 +109,10 @@ function Window({ children, name }) {
   if (name !== openName) return null;
 
   return createPortal(
-    <div className="fixed left-0 top-0 z-[1000] h-screen w-full backdrop-blur-sm transition-all  duration-500 max-[767px]:top-[20%]">
+    <div className="fixed left-0 top-0 z-[1000] h-screen w-full backdrop-blur-sm transition-all  duration-500 max-[767px]:top-10">
       <div
         ref={ref}
-        className="fixed left-[50%] top-[40%]  w-4/5 -translate-x-[50%] -translate-y-[50%]  bg-blue-200  p-4 transition-all duration-500  max-[767px]:left-[50%] max-[767px]:top-[50%] max-[767px]:w-3/4 max-[767px]:-translate-x-[50%]"
+        className="fixed left-[50%] top-[40%]  w-4/5 -translate-x-[50%] -translate-y-[50%]  bg-blue-200  p-4 transition-all duration-500    max-[767px]:w-3/4 "
       >
         <button
           onClick={close}

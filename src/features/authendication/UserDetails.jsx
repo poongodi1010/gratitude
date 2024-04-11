@@ -34,10 +34,13 @@ function UserDetails() {
   //const password = user.user_metadata.password;
   //console.log("55", name, email, password);
   return (
-    <form className="ml-[10rem] mt-6" onSubmit={handleSubmit}>
+    <form className="ml-[10rem] mt-6 max-[767px]:ml-0" onSubmit={handleSubmit}>
       <div>
         <div>
-          <label htmlFor="name" className="mr-8 text-3xl font-semibold">
+          <label
+            htmlFor="name"
+            className="mr-8 text-3xl font-semibold max-[767px]:text-[1.5rem]"
+          >
             Name{" "}
           </label>
         </div>
@@ -48,12 +51,12 @@ function UserDetails() {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
+          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4 font-sans text-2xl text-black !outline-none max-[767px]:w-full max-[767px]:text-[1.5rem]"
         />
       </div>
       <div className="mt-8 text-3xl font-semibold">
         <div>
-          <label htmlFor="email" className="mr-8 ">
+          <label htmlFor="email" className="mr-8 max-[767px]:text-[1.5rem]">
             Email{" "}
           </label>
         </div>
@@ -64,7 +67,7 @@ function UserDetails() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
+          className="mt-4 w-[70%] rounded-xl bg-gray-300 px-4 py-4 font-sans text-2xl text-black  !outline-none max-[767px]:w-full  max-[767px]:text-[1.5rem] "
         />
       </div>
       {/*
@@ -91,7 +94,7 @@ function UserDetails() {
         <input type="password" name="password" id="password" />
       </div> */}
       <button
-        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 py-4 text-white"
+        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 py-4 text-white max-[767px]:w-full  max-[767px]:text-[1.5rem]"
         disabled={isUpdating}
       >
         Update Profile

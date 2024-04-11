@@ -55,7 +55,7 @@ function PepTalk() {
             </svg>
           </div>
         </div>
-        <div className="font-[Bree Serif] m-auto whitespace-pre-line pt-8 text-justify  md:px-4 lg:pl-24">
+        <div className="font-[Bree Serif] m-auto whitespace-pre-line pt-8 text-justify max-[767px]:px-8 max-[767px]:text-[1.2rem] lg:pl-24">
           <h3 className="py-4">
             <span className="font-bold"> {userName} </span>, meet
             <span className="font-bold"> {userName} </span> - an really

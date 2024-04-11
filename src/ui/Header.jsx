@@ -7,7 +7,9 @@
 import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import SideBar from "./SideBar";
-
+import { useEffect } from "react";
+import Logo from "./Logo";
+import MainNav from "./MainNav";
 //import DropDown from "./DropDown";
 
 // const StyledHeader = styled.header`
@@ -22,7 +24,20 @@ import SideBar from "./SideBar";
 
 function Header() {
   const [isVisible, setIsVisisble] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  console.log("w in header", width);
   // function handleVisible() {
   //   setIsVisisble((v) => !v);
   // }
@@ -30,9 +45,16 @@ function Header() {
   return (
     <>
       {/* // <header className=" border-b-2 border-b-black bg-[url(`/cherry.jpg`)] bg-cover  px-[4.8rem] max-[424px]:p-0  sm:gap-[0.1rem] sm:px-0 sm:py-4 lg:flex lg:h-[110px] lg:items-center lg:gap-[0.4rem] lg:overflow-hidden  "> */}
-      <header className="  flex h-[110px] items-center gap-[0.4rem] overflow-hidden border-b-2 border-b-black bg-[url('/banner11.jpeg')] bg-cover px-[4.8rem]  ">
+      <header className="  flex h-[110px] items-center gap-[0.4rem] overflow-hidden border-b-2 border-b-black bg-[url('/banner11.jpeg')] bg-cover px-[4.8rem] max-[767px]:px-1 ">
         {/* <UserAvatar /> */}
-        <SideBar />
+        {width > 767 ? (
+          <SideBar />
+        ) : (
+          <>
+            <Logo />
+            <MainNav />
+          </>
+        )}
         <HeaderMenu setIsVisisble={setIsVisisble} isVisible={isVisible} />
         {/* <DropDown isVisible={isVisible} setIsVisisble={setIsVisisble} /> */}
         {/* <UserAvatar />

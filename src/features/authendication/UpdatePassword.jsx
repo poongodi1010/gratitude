@@ -11,10 +11,16 @@ function UpdatePassword() {
   }
 
   return (
-    <form className="ml-[10rem] mt-6" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="ml-[10rem] mt-6 max-[767px]:ml-0"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div>
         <div>
-          <label htmlFor="name" className="mr-8 text-3xl font-semibold">
+          <label
+            htmlFor="name"
+            className="mr-8 text-3xl font-semibold max-[767px]:text-[1.5rem]"
+          >
             Password
           </label>
         </div>
@@ -30,12 +36,15 @@ function UpdatePassword() {
             },
           })}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
+          className="mt-4 w-[70%]  rounded-xl bg-gray-300  max-[767px]:text-[1.5rem] px-4 py-4  font-sans text-2xl text-black !outline-none max-[767px]:w-full"
         />
       </div>
-      <div className="mt-8 text-3xl font-semibold">
+      <div className="mt-8 ">
         <div>
-          <label htmlFor="email" className="mr-8 ">
+          <label
+            htmlFor="email"
+            className="mr-8 text-3xl font-semibold max-[767px]:text-[1.5rem] "
+          >
             Confirm Password{" "}
           </label>
         </div>
@@ -49,12 +58,12 @@ function UpdatePassword() {
               getValues().password === value || "Passwords need to match",
           })}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
+          className="mt-4 w-[70%]  rounded-xl bg-gray-300  max-[767px]:text-[1.5rem] px-4 py-4  font-sans text-2xl text-black !outline-none max-[767px]:w-full"
         />
       </div>
 
       <button
-        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 py-4 text-white"
+        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 max-[767px]:text-[1.5rem] py-4 text-white max-[767px]:w-full "
         disabled={isUpdating}
       >
         Update Password
