@@ -64,7 +64,7 @@ function HeaderMenu({ setIsVisisble, isVisible }) {
       </button>
       {/* <div className="absolute right-[10px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] px-8 text-white"> */}
       {isVisible ? (
-        <ul className="absolute right-[3px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] p-4 px-8 text-center text-white max-[767px]:right-[15px] max-[767px]:top-[42px] max-[767px]:text-[1.2rem]">
+        <ul className="absolute right-[3px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] p-4 px-8 text-center text-white max-[767px]:right-[15px] max-[767px]:top-[50px] max-[767px]:text-[1.2rem] max-[374px]:top-[40px]">
           <li
             className="cursor-pointer py-4"
             onClick={() => navigate("/account")}

@@ -62,8 +62,9 @@ function ToDoList() {
         </div>
       ) : (
         <div>
-          <div>
+          <div className="flex justify-between ">
             <AddToDoForSmall width={width} />
+            <ToDoOperations />
           </div>
           {date ? <ToDoTableByDate /> : <ToDoTableForSmall />}
         </div>
