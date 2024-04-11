@@ -10,6 +10,10 @@ export async function getUserId() {
 
   return user.user;
 }
+
+export function capitalCheck(word) {
+  return word.charAt(0) === word.charAt(0).toUpperCase();
+}
 // let height;
 // let width;
 // // Insert values on load of page

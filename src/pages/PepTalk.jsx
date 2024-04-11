@@ -1,16 +1,25 @@
 import { useUsers } from "../features/authendication/useUsers";
+import { capitalCheck } from "../utils/constants";
 //import ShowPepTalk from "../features/pepTalk/ShowPepTalk";
 
 function PepTalk() {
   const { user } = useUsers();
+  console.log("user", user);
   const name = user.user_metadata.fullName;
   const words = name.split(" ");
 
-  const userName = words
-    .map((word) => {
-      return word[0].toUpperCase() + word.substring(1);
-    })
-    .join(" ");
+  const isCapital = capitalCheck(words[0]);
+  let userName;
+
+  if (isCapital === true) {
+    userName = words[0];
+  } else {
+    userName = words
+      .map((word) => {
+        return word[0].toUpperCase() + word.substring(1);
+      })
+      .join(" ");
+  }
 
   //   const pepTalkPara = ` ${userName}, meet ${userName} - an really important person.
   //   ${userName}, you're a big thinker so always thonk big.Think big about everything.

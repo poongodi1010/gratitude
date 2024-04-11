@@ -57,14 +57,14 @@ function HeaderMenu({ setIsVisisble, isVisible }) {
       </li> */}
 
       <button
-        className=" relative mx-4  h-full w-full cursor-pointer pr-3.5 text-left font-[PT-serif] text-3xl font-bold text-red-800 !outline-none transition-all duration-300 hover:text-yellow-600  focus:text-yellow-800 max-[767px]:h-full max-[767px]:w-full max-[767px]:text-[1.2rem]  [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+        className=" relative mx-4  h-full w-full cursor-pointer pr-3.5 text-left font-[PT-serif] text-3xl font-bold text-red-800 !outline-none transition-all duration-300 hover:text-yellow-600  focus:text-yellow-800 max-[767px]:h-full max-[767px]:w-full max-[767px]:text-[1.7rem]  [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
         onClick={() => setIsVisisble((v) => !v)}
       >
         {name}
       </button>
       {/* <div className="absolute right-[10px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] px-8 text-white"> */}
       {isVisible ? (
-        <ul className="absolute right-[3px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] p-4 px-8 text-center text-white max-[767px]:right-[20px] max-[767px]:text-[1.2rem]">
+        <ul className="absolute right-[3px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] p-4 px-8 text-center text-white max-[767px]:right-[15px] max-[767px]:top-[42px] max-[767px]:text-[1.2rem]">
           <li
             className="cursor-pointer py-4"
             onClick={() => navigate("/account")}
