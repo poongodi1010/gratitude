@@ -10,7 +10,6 @@ function ToDoFooter({ dates }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentDate = searchParams.get("date");
 
-  console.log("filter date", currentDate);
   return (
     <div className="  mb-8 mt-16 grid  grid-cols-7 justify-center ">
       {dates.map((d) => (

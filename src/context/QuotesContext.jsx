@@ -55,8 +55,9 @@ function QuotesProvider({ children }) {
     try {
       // const res = await fetch("http://localhost:5000");
       // const res = await fetch("https://backendserver-production-af63.up.railway.app");
-      const res = await fetch("https://backendserver-production-af63.up.railway.app");
-      //console.log("res", res.json());
+      const res = await fetch(
+        "https://backendserver-production-af63.up.railway.app",
+      );
       const data = await res.json();
 
       dispatch({ type: "quotes/today", payload: data });
@@ -81,11 +82,9 @@ function QuotesProvider({ children }) {
       // const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
       // const url = `http://localhost:5000/${keyword}`;
       const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
-      console.log("Context url", url);
       const res = await fetch(url);
 
       const data = await res.json();
-      console.log("data", data);
       dispatch({ type: "quotes/keyword", payload: data });
     } catch {
       dispatch({

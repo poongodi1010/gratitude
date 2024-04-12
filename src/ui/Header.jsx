@@ -37,10 +37,7 @@ function Header() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log("w in header", width);
-  // function handleVisible() {
-  //   setIsVisisble((v) => !v);
-  // }
+ 
 
   return (
     <>

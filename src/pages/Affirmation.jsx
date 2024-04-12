@@ -6,9 +6,6 @@
 import GetAffirmations from "../features/affirmations/GetAffirmations";
 
 function Affirmation() {
-  // useEffect(function () {
-  //   getAffirmations().then((data) => console.log(data));
-  // }, []);
   return <GetAffirmations />;
 }
 export default Affirmation;

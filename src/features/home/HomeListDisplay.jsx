@@ -39,14 +39,6 @@ function HomeListDisplay({ post }) {
                 : post.fields.blogSummary.split(" ").slice(0, 15).join(" ")}
             </span>
           </p>
-          {/* <button
-            className="cursor-pointer bg-red-900 p-2 text-white "
-            onClick={
-              (console.log("clicked"),
-              setIsExpanded((exp) => !exp),
-              navigate(`/blogDetails/${post.sys.id}`))
-            }
-          > */}
 
           <Link
             to={`/blogDetails/${post.sys.id}`}

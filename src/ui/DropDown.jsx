@@ -39,7 +39,7 @@ function DropDown({ isVisible }) {
   //   },
   //   [setIsVisisble],
   // );
-  console.log("visible", isVisible);
+
   return (
     <div className="absolute right-[110px] top-[100px] z-50 my-4 rounded-md bg-pink-200 px-8">
       {isVisible ? (

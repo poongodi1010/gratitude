@@ -20,10 +20,6 @@ function FilterForSmall({ filterField, options }) {
     [setIsVisible],
   );
 
-  //   function handleChange() {
-  //     () => setIsVisible((v) => !v);
-  //     console.log("visi", isVisible);
-  //   }
   const [searchParams, setSearchParams] = useSearchParams();
   const currentFilter = searchParams.get(filterField) || options.at(0).value;
   function handleClick(value) {

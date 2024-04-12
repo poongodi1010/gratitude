@@ -1,21 +1,15 @@
 /* eslint-disable react/prop-types */
-// import { useGratitude } from "./useGratitude";
 import { useQueryClient } from "@tanstack/react-query";
 import Spinner from "../../ui/Spinner";
 import { useCreateGratitude } from "./useCreateGratitude";
 import { useForm } from "react-hook-form";
-//import { useSearchParams } from "react-router-dom";
 import { useEditGratitude } from "./useEditGratitude";
 import { FormattedDate } from "../../utils/helpers";
-
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 function CreateGratitudeEntry({ onCloseModal, gratitudeToEdit = {} }) {
   const { id: editId, ...editValues } = gratitudeToEdit;
   const isEditSession = Boolean(editId);
-  console.log("edit id", editId);
   const queryClient = useQueryClient();
 
   const { isCreating, createGratitude } = useCreateGratitude();
@@ -34,13 +28,9 @@ function CreateGratitudeEntry({ onCloseModal, gratitudeToEdit = {} }) {
         {
           onSuccess: (data) => {
             console.log(data);
-
             reset();
-            // click();
             onCloseModal?.();
             queryClient.invalidateQueries({ queryKey: ["gratitude"] });
-
-            // navigate(-1);
           },
         },
       );
@@ -52,13 +42,9 @@ function CreateGratitudeEntry({ onCloseModal, gratitudeToEdit = {} }) {
         {
           onSuccess: (data) => {
             console.log(data);
-
             reset();
-            // click();
             onCloseModal?.();
             queryClient.invalidateQueries({ queryKey: ["gratitude"] });
-
-            // navigate(-1);
           },
         },
       );

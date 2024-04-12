@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 export function useToDo() {
   const { id } = useParams();
-  console.log("idd", id);
+
   const {
     isLoading,
     data: toDo,

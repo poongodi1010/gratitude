@@ -16,8 +16,7 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
   const { errors } = formState;
   const { addToDo, isAdding } = useAddToDo();
   const { isEditing, editStatus } = useEditToDoStatus();
-  // const { user } = useUsers();
-  // console.log("inside createdtodo ", user.id);
+
   function onSubmit(data) {
     if (editSession) {
       editStatus({ newStatus: { ...data }, id: editId });
@@ -25,7 +24,6 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
       onCloseModal?.();
       queryClient.invalidateQueries({ queryKey: ["to_do"] });
     } else {
-      console.log("data to do", data);
       addToDo({ ...data });
       reset;
       onCloseModal?.();

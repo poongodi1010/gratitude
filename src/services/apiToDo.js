@@ -1,15 +1,6 @@
 import supabase from "./supabase";
 import { PAGE_SIZE, getUserId } from "../utils/constants";
 
-// export async function getUserId() {
-//   const { data: session } = await supabase.auth.getSession();
-//   if (!session.session) return null;
-
-//   const { data: user } = await supabase.auth.getUser();
-//   console.log("user", user.user);
-//   return user;
-// }
-
 export async function getToDoLists({ filter, sortBy, page }) {
   const user = await getUserId();
 
@@ -44,7 +35,6 @@ export async function getToDoLists({ filter, sortBy, page }) {
 }
 
 export async function getToDoList(id) {
-  console.log("inside gettodolist", id);
   let { data: toDo, error } = await supabase
     .from("to_do")
     .select("*")
@@ -59,7 +49,6 @@ export async function getToDoList(id) {
 export async function getToDoListByDate(date) {
   const user = await getUserId();
 
-  console.log("inside gettodolistBydate", date);
   let { data: list, error } = await supabase
     .from("to_do")
     .select("*")
@@ -98,8 +87,6 @@ export async function addToDoList(newData) {
 }
 
 export async function editToDoStatus(newStatus, id) {
-  console.log("inside api", newStatus.status);
-  console.log("inside api id", id);
   // if (id) {
   const { data, error } = await supabase
     .from("to_do")
@@ -116,7 +103,6 @@ export async function editToDoStatus(newStatus, id) {
 }
 
 export async function deleteToDo(id) {
-  console.log("del id", id);
   const { data, error } = await supabase.from("to_do").delete().eq("id", id);
 
   if (error) {

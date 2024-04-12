@@ -18,13 +18,12 @@ export async function signup({ email, password, fullName }) {
 }
 
 export async function login(data) {
-  console.log("inside logi", data);
   const { data: loginData, error } = await supabase.auth.signInWithPassword({
     email: data.email,
     password: data.password,
   });
   if (error) throw new Error(error.message);
-  console.log("user details", loginData);
+
   return loginData;
 }
 
@@ -48,9 +47,7 @@ export async function updateCurrentUser({ fullName, email, password }) {
   let updateData;
 
   if (fullName) {
-    console.log("11");
     if (email) {
-      console.log("12");
       updateData = {
         email: email,
         data: {
@@ -58,7 +55,6 @@ export async function updateCurrentUser({ fullName, email, password }) {
         },
       };
     } else {
-      console.log("13");
       updateData = {
         data: {
           fullName,
@@ -66,43 +62,15 @@ export async function updateCurrentUser({ fullName, email, password }) {
       };
     }
   } else {
-    console.log("14");
     updateData = {
       email: email,
     };
   }
 
-  // if (fullName && email) {
-  //   console.log("inside fullnme 1");
-  //   updateData = {
-  //     email: email,
-  //     data: {
-  //       fullName,
-  //     },
-  //   };
-  // } else {
-  //   console.log("inside fullnme 2");
-  //   if (fullName) {
-  //     console.log("inside fullnme 3");
-  //     updateData = {
-  //       data: {
-  //         fullName,
-  //       },
-  //     };
-  //   } else {
-  //     {
-  //       console.log("inside fullnme 4");
-  //       updateData = { email: email };
-  //     }
-  //   }
-  // }
-
-  console.log("new password", password);
   if (password && !email && !fullName) {
-    console.log("15");
     updateData = { password: password };
   }
-  console.log("updatedata is", updateData);
+
   const { data, error } = await supabase.auth.updateUser(updateData);
   if (error) throw new Error(error.message);
 

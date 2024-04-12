@@ -20,7 +20,6 @@ function LoginForm() {
   }
 
   function onSubmit(data) {
-    console.log("data to do", data);
     login({ ...data });
     reset;
     queryClient.invalidateQueries({ queryKey: ["user"] });

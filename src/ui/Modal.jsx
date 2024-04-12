@@ -64,9 +64,9 @@ import { createPortal } from "react-dom";
 
 const ModalContext = createContext();
 
-function Modal({ children, width }) {
+function Modal({ children }) {
   const [openName, setOpenName] = useState("");
-  console.log("wid", width);
+
   const close = () => setOpenName("");
   const open = setOpenName;
 

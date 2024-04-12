@@ -17,20 +17,6 @@ function ToDoRowForSmall({ list }) {
   //   const { isEditing, editStatus } = useEditToDoStatus();
   const { isDeleting, deleteToDo } = useDeleteToDo();
   const id = list.id;
-  console.log("id", id);
-  // const date = format(list.date, "MM/dd");
-  // console.log("date", date);
-  // useEffect(
-  //   function () {
-  //     function handleClick() {
-  //       console.log("inside handle click");
-  //       console.log("inside id", id);
-  //       () => navigate(`/todolist/${id}`);
-  //     }
-  //     handleClick();
-  //   },
-  //   [id],
-  // );
 
   return (
     <div

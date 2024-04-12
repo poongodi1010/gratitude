@@ -3,7 +3,7 @@ import { useCopyToDo } from "./useCopyToDO";
 
 function ToDoTableByDate() {
   const { toDoListByDate = [] } = useCopyToDo();
-  console.log("todolistbydate", toDoListByDate);
+
   if (toDoListByDate.length === 0)
     return (
       <p className="my-32 text-center text-3xl font-semibold">

@@ -18,7 +18,6 @@
 // `;
 
 function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
-  console.log("name", resourceName);
   return (
     <div className="flex w-[100rem] flex-col gap-5 font-sans max-[767px]:w-full ">
       <h3 className="font-bold">Delete {resourceName}</h3>

@@ -4,7 +4,7 @@ import { capitalCheck } from "../utils/constants";
 
 function PepTalk() {
   const { user } = useUsers();
-  console.log("user", user);
+
   const name = user.user_metadata.fullName;
   const words = name.split(" ");
 

@@ -11,15 +11,10 @@ function HomeList() {
     accessToken: "A7DMs_x2th8WoscQbwed3045b0zc0J8nr5art9a2T98",
   });
 
-  //const navigate = useNavigate();
-  //const arrayOfContent = post.fields.blogSummary.trim().split(/\s+/);
-  console.log(blogPost);
-  // const arrayOfContent = grat.gratitude.trim().split(/\s+/);
   useEffect(() => {
     const getAllEntries = async () => {
       try {
         await client.getEntries().then((entries) => {
-          console.log("entries", entries);
           setBlogPost(entries);
         });
       } catch (error) {

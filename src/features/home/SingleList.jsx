@@ -13,12 +13,10 @@ function SingleList() {
 
   const { id } = useParams();
 
-  console.log(singleBlogPost);
   useEffect(() => {
     const getEntryById = async () => {
       try {
         await client.getEntry(id).then((entry) => {
-          console.log("entry", entry);
           setSingleBlogPost(entry);
         });
       } catch (error) {

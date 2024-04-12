@@ -31,8 +31,7 @@ function UserDetails() {
       },
     );
   }
-  //const password = user.user_metadata.password;
-  //console.log("55", name, email, password);
+
   return (
     <form className="ml-[10rem] mt-6 max-[767px]:ml-0" onSubmit={handleSubmit}>
       <div>

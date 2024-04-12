@@ -19,7 +19,7 @@ function ToDoOperations() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log("width in operation", width);
+
   return (
     <div className="flex justify-between px-2">
       {width > 767 ? (

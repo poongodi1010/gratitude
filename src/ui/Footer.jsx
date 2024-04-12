@@ -10,7 +10,7 @@ function Footer() {
 
   for (let i = 0; i < 7; i++) {
     const currentDate = new Date();
-    console.log("looping", i);
+
     futureDate1.push(format(addDays(currentDate, i), "yyyy-MM-dd"));
   }
 

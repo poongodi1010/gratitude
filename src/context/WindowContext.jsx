@@ -8,21 +8,16 @@ function WindowProvider({ children }) {
   let width;
 
   // Insert values on load of page
-  //console.log("inner", window.innerWidth);
   window.onload = function () {
-    //console.log("inside onload");
     height = window.innerHeight;
     width = window.innerWidth;
   };
 
   window.onresize = function () {
     // Setting the current height & width
-    // to the elements
-    //console.log("inisde onresize");
-    //console.log("window.innerwidth", window.innerWidth);
+    // to the element
     height = window.innerHeight;
     width = window.innerWidth;
-    //console.log("h, w", height, width);
   };
 
   return (

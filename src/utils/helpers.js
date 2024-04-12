@@ -32,10 +32,9 @@ export const SequenceDate = (currentDate) => {
   for (let n = 0; n < 7; n++) {
     futureDate = format(addDays(currentDate, n), "MM dd");
     //n++;
-    console.log("inside date fns", futureDate);
+
     return futureDate;
   }
-  //console.log("outside loop", futureDate);
 };
 export const FormattedCreatedDate = (date) => {
   const formattedCreatedDate = format(date, "MMM do, yyyy");

@@ -6,15 +6,7 @@ function ToDoDetail() {
   const { toDo = [], isLoading } = useToDo();
   const { isEditing, editStatus } = useEditToDoStatus();
   const navigate = useNavigate();
-  //const { id, status } = toDo;
-  console.log("todo", toDo);
-  //const { id, status } = toDo;
-  //console.log("toDo id status", id, status);
-  // function handleChange() {
-  //   console.log("inisde handle");
-  //   editStatus({ newStatus: { ...toDo, status: "done" }, id: id });
-  // }
-  //console.log("todois", ...toDo[0]);
+
   return (
     <div className="mt-20  rounded-xl  bg-slate-100 p-4 shadow-xl hover:bg-slate-300 ">
       {toDo.map((list) => (
