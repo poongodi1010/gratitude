@@ -29,7 +29,7 @@ function SignupForm() {
       <div className="  m-auto flex px-20 py-4 text-center">
         <label htmlFor="fullName">
           <input
-            className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg  text-black !outline-none "
+            className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg text-black  !outline-none max-[767px]:py-2 "
             type="text"
             id="fullName"
             placeholder="Enter your Name"
@@ -43,7 +43,7 @@ function SignupForm() {
       <div className="  m-auto flex px-20 py-4 text-center">
         <label htmlFor="email">
           <input
-            className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg  text-black !outline-none "
+            className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg text-black  !outline-none max-[767px]:py-2 "
             type="email"
             id="email"
             placeholder="Enter your Email"
@@ -64,7 +64,7 @@ function SignupForm() {
             // onChange={(e) => setPassword(e.target.value)}
             disabled={isLoading}
             {...register("password", { required: "This field is required" })}
-            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none   "
+            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
           />
           {/* <span
             onClick={handleToggle}
@@ -92,7 +92,7 @@ function SignupForm() {
             {...register("confirmpassword", {
               required: "This field is required",
             })}
-            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none   "
+            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12  text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
           />
           <span
             onClick={handleToggle}
@@ -112,7 +112,7 @@ function SignupForm() {
       <div className=" p-4 text-center">
         <button
           disabled={isLoading}
-          className="rounded-xl border-2 border-gray-100 bg-red-400 px-6 py-2 font-sans text-2xl text-white"
+          className="rounded-xl border-2 border-gray-100 bg-red-400 px-6 py-2 font-sans text-2xl text-white max-[767px]:py-1 max-[767px]:text-xl"
         >
           Signup
         </button>

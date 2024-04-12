@@ -30,12 +30,11 @@ function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className=" m-auto  ">
-      <div className="  m-auto flex px-20 py-4 text-center">
+    <form onSubmit={handleSubmit} className=" m-auto   ">
+      <div className="  m-auto flex px-20 py-4 text-center   max-[767px]:my-2 max-[767px]:px-12 max-[767px]:py-2">
         <label htmlFor="email"></label>
         <input
-          className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg  text-black !outline-none "
-          type="email"
+          className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2 max-[767px]:pl-[4.8rem] max-[767px]:pr-10 max-[767px]:text-[1rem] "
           id="email"
           placeholder="Enter your Email"
           value={email}
@@ -43,7 +42,7 @@ function LoginForm() {
           disabled={isLoading}
         />
       </div>
-      <div className="relative  m-auto  flex px-20 py-4 text-center">
+      <div className="relative  m-auto  flex px-20 py-4  text-center  max-[767px]:px-12  max-[767px]:py-2">
         <label htmlFor="password">
           <input
             id="password"
@@ -52,12 +51,12 @@ function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             disabled={isLoading}
-            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none   "
+            className=" rounded-xl bg-gray-200 py-4  pl-8 pr-12 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2 max-[767px]:pl-10 max-[767px]:pr-[4.8rem] max-[767px]:text-[1rem]   "
           />
           <span
             onClick={handleToggle}
             value={isVisible}
-            className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center   px-8 py-4  "
+            className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center  px-8 py-4 max-[767px]:pl-4 max-[767px]:pr-0  "
           >
             {/* <HiEye /> */}
             {isVisible ? (
@@ -69,10 +68,10 @@ function LoginForm() {
         </label>
       </div>
       {/* absolute top-[50%]    -translate-y-[50%]*/}
-      <div className=" p-4 text-center">
+      <div className=" p-4 text-center max-[374px]:p-1">
         <button
           disabled={isLoading}
-          className="rounded-xl border-2 border-gray-100 bg-red-400 px-6 py-2 font-sans text-2xl text-white"
+          className="rounded-xl border-2 border-gray-100 bg-red-400 px-6 py-2 font-sans text-2xl text-white !outline-none max-[767px]:px-4 max-[767px]:text-xl"
         >
           Login
         </button>
