@@ -17,14 +17,15 @@ export async function signup({ email, password, fullName }) {
   return data;
 }
 
-export async function login({ email, password }) {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
+export async function login(data) {
+  console.log("inside logi", data);
+  const { data: loginData, error } = await supabase.auth.signInWithPassword({
+    email: data.email,
+    password: data.password,
   });
   if (error) throw new Error(error.message);
-  console.log("user details", email, password);
-  return data;
+  console.log("user details", loginData);
+  return loginData;
 }
 
 export async function getCurrentUser() {
