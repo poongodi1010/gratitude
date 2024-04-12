@@ -37,7 +37,7 @@ function SignupForm() {
             {...register("fullName", { required: "Please enter Name" })}
           />
         </label>
-        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+        <span className="mx-4  p-2 text-2xl text-[1rem] text-red-500 max-[767px]:mx-0 max-[767px]:mt-1">
           {errors?.fullName?.message}
         </span>
       </div>
@@ -49,10 +49,16 @@ function SignupForm() {
             id="email"
             placeholder="Enter your Email"
             disabled={isLoading}
-            {...register("email", { required: "Email id is required" })}
+            {...register("email", {
+              required: "Email id is required",
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Please provide valid email address",
+              },
+            })}
           />
         </label>
-        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+        <span className="mx-4  p-2 text-2xl text-[1rem] text-red-500 max-[767px]:mx-0 max-[767px]:mt-1">
           {errors?.email?.message}
         </span>
       </div>
@@ -63,11 +69,13 @@ function SignupForm() {
             type="password"
             placeholder="Enter your Password"
             disabled={isLoading}
-            {...register("password", { required: "Password is required" })}
+            {...register("password", {
+              required: "Password is required",
+            })}
             className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
           />
         </label>
-        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+        <span className="mx-4  p-2 text-2xl text-[1rem] text-red-500 max-[767px]:mx-0 max-[767px]:mt-1">
           {errors?.password?.message}
         </span>
       </div>
@@ -98,7 +106,7 @@ function SignupForm() {
             </span>
           </label>
         </div>
-        <p className="mx-4 p-2 text-center text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+        <p className="mx-4 p-2 text-center text-2xl text-[1rem] text-red-500 max-[767px]:mx-0 max-[767px]:mt-1">
           {errors?.confirmpassword?.message}
         </p>
       </div>
