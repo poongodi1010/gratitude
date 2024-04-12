@@ -4,17 +4,15 @@ import { HiEye, HiEyeSlash } from "react-icons/hi2";
 import { useState } from "react";
 import { useSignup } from "./useSignUp";
 import { useForm } from "react-hook-form";
+//import { useQueryClient } from "@tanstack/react-query";
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [name, setName] = useState("");
   const [isVisible, setIsVisible] = useState(false);
-  //const { login, isLoading } = useLogin();
   const { signup, isLoading } = useSignup();
-  const { register, handleSubmit, reset } = useForm();
-  //const { errors } = formState;
+  //const queryClient = useQueryClient();
+  const { register, handleSubmit, reset, formState } = useForm();
+  const { errors } = formState;
 
   function handleToggle() {
     setIsVisible((visible) => !visible);
@@ -23,90 +21,86 @@ function SignupForm() {
   function onSubmit({ fullName, email, password }) {
     signup({ fullName, email, password }, { onSettled: reset });
   }
-
+  function onError(errors) {
+    console.log(errors);
+  }
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" m-auto  ">
-      <div className="  m-auto flex px-20 py-4 text-center">
+    <form onSubmit={handleSubmit(onSubmit, onError)} className=" m-auto  ">
+      <div className="  m-auto flex flex-col px-20 py-2 text-center">
         <label htmlFor="fullName">
           <input
             className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg text-black  !outline-none max-[767px]:py-2 "
             type="text"
             id="fullName"
             placeholder="Enter your Name"
-            // value={name}
-            // onChange={(e) => setName(e.target.value)}
             disabled={isLoading}
-            {...register("fullName", { required: "This field is required" })}
+            {...register("fullName", { required: "Please enter Name" })}
           />
         </label>
+        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+          {errors?.fullName?.message}
+        </span>
       </div>
-      <div className="  m-auto flex px-20 py-4 text-center">
+      <div className="  m-auto flex flex-col px-20 py-2 text-center">
         <label htmlFor="email">
           <input
             className=" rounded-xl  bg-gray-200 py-4 pl-12 pr-8 text-center font-sans text-lg text-black  !outline-none max-[767px]:py-2 "
             type="email"
             id="email"
             placeholder="Enter your Email"
-            // value={email}
-            // onChange={(e) => setEmail(e.target.value)}
             disabled={isLoading}
-            {...register("email", { required: "This field is required" })}
+            {...register("email", { required: "Email id is required" })}
           />
         </label>
+        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+          {errors?.email?.message}
+        </span>
       </div>
-      <div className="relative  m-auto  flex px-20 py-4 text-center">
+      <div className="relative  m-auto flex flex-col px-20 py-2 text-center">
         <label htmlFor="password">
           <input
             id="password"
             type="password"
             placeholder="Enter your Password"
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
             disabled={isLoading}
-            {...register("password", { required: "This field is required" })}
+            {...register("password", { required: "Password is required" })}
             className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
           />
-          {/* <span
-            onClick={handleToggle}
-            value={isVisible}
-            className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center   px-8 py-4  "
-          >
-            {/* <HiEye /> *
-            {isVisible ? (
-              <HiEye className="cursor-pointer " />
-            ) : (
-              <HiEyeSlash className=" w-full cursor-pointer" />
-            )}
-          </span> */}
         </label>
+        <span className="mx-4  p-2 text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+          {errors?.password?.message}
+        </span>
       </div>
-      <div className="relative  m-auto  flex px-20 py-4 text-center">
-        <label htmlFor="confirmpassword">
-          <input
-            id="confirmpassword"
-            type={isVisible ? "text" : "password"}
-            placeholder="Enter your Password"
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
-            disabled={isLoading}
-            {...register("confirmpassword", {
-              required: "This field is required",
-            })}
-            className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12  text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
-          />
-          <span
-            onClick={handleToggle}
-            value={isVisible}
-            className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center   px-8 py-4  "
-          >
-            {/* <HiEye /> */}
-            {isVisible ? (
-              <HiEye className="cursor-pointer " />
-            ) : (
-              <HiEyeSlash className=" w-full cursor-pointer" />
-            )}
-          </span>
-        </label>
+      <div>
+        <div className="relative  m-auto  flex flex-col px-20 py-2 text-center">
+          <label htmlFor="confirmpassword">
+            <input
+              id="confirmpassword"
+              type={isVisible ? "text" : "password"}
+              placeholder="Enter your Password"
+              disabled={isLoading}
+              {...register("confirmpassword", {
+                required: "Password is required",
+              })}
+              className=" rounded-xl bg-gray-200 py-4 pl-8 pr-12  text-center font-sans text-lg text-black !outline-none max-[767px]:py-2   "
+            />
+            <span
+              onClick={handleToggle}
+              value={isVisible}
+              className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center   px-8 py-4  "
+            >
+              {/* <HiEye /> */}
+              {isVisible ? (
+                <HiEye className="cursor-pointer " />
+              ) : (
+                <HiEyeSlash className=" w-full cursor-pointer" />
+              )}
+            </span>
+          </label>
+        </div>
+        <p className="mx-4 p-2 text-center text-2xl text-red-500 max-[767px]:mx-0 max-[767px]:mt-1 max-[767px]:text-[1rem]">
+          {errors?.confirmpassword?.message}
+        </p>
       </div>
       {/* absolute top-[50%]    -translate-y-[50%]*/}
       <div className=" p-4 text-center">
