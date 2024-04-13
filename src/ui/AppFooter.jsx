@@ -27,7 +27,7 @@ function AppFooter() {
         </a>
       </div>
       <p className="text-center max-[767px]:text-[1rem]">
-        &copy; 2024 by The Gratitute. All rights reserved.
+        &copy; 2024 by The Gratify. All rights reserved.
       </p>
     </>
   );
