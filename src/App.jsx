@@ -20,7 +20,7 @@ import { UserProvider } from "./features/authendication/UserContext";
 import KeywordQuotesDisplay from "./features/quotes/KeywordQuotesDisplay";
 import { QuotesProvider } from "./context/QuotesContext";
 import SingleList from "./features/home/SingleList";
-import { WindowProvider } from "./context/WindowContext";
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,7 +37,6 @@ function App() {
       <GlobalStyles />
 
       <UserProvider>
-        <WindowProvider>
           <QuotesProvider>
             <BrowserRouter>
               <Routes>
@@ -75,7 +74,6 @@ function App() {
               </Routes>
             </BrowserRouter>
           </QuotesProvider>
-        </WindowProvider>
       </UserProvider>
 
       <Toaster
