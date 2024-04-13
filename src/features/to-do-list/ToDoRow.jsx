@@ -1,6 +1,3 @@
-//import { useState } from "react";
-//import { useToDo } from "./useToDo";
-//import { useEditToDoStatus } from "./useEditToDoStatus";
 /* eslint-disable react/prop-types */
 import Modal from "../../ui/Modal";
 
@@ -11,10 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEditToDoStatus } from "./useEditToDoStatus";
 import ConfirmDelete from "../../ui/ConfirmDelete";
-//import { deleteToDo } from "../../services/apiToDo";
 import { useDeleteToDo } from "./useDeleteToDo";
-//import { format } from "date-fns";
-//import { useEffect } from "react";
+
 function ToDoRow({ list }) {
   const navigate = useNavigate();
   const [checked, setChecked] = useState(false);
@@ -54,23 +49,7 @@ function ToDoRow({ list }) {
         <h2>{list.priority}</h2>
       </div>
       <div className="text-center">
-        <h2>
-          {list.status}
-          {/* <label htmlFor="status"></label>
-
-          <select
-            id="status"
-            name="status"
-            type="text"
-            onChange={handleStatus}
-            value={statusOption}
-            disabled={isEditing}
-          >
-            <option value="New">New</option>
-            <option value="In-Progress">In Progress</option>
-            <option value="Completed">Done</option>
-          </select> */}
-        </h2>
+        <h2>{list.status}</h2>
       </div>
       <div className="text-center">
         <h2>{list.date}</h2>
@@ -96,7 +75,6 @@ function ToDoRow({ list }) {
             </Menus.List>
 
             <Modal.Window name="edit">
-              {/* //{editSession && <CreateGratitudeEntry gratitudeToEdit={grat} />} */}
               <CreateToDoList toDoToEdit={list} />
             </Modal.Window>
 

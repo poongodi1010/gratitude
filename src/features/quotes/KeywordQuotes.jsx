@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 function KeywordQuotes({ keyword }) {
-  //const { quotesKeyword } = useParams();
   const navigate = useNavigate();
 
   function handleClick() {

@@ -1,6 +1,5 @@
 import { useUsers } from "../features/authendication/useUsers";
 import { capitalCheck } from "../utils/constants";
-//import ShowPepTalk from "../features/pepTalk/ShowPepTalk";
 
 function PepTalk() {
   const { user } = useUsers();
@@ -20,29 +19,6 @@ function PepTalk() {
       })
       .join(" ");
   }
-
-  //   const pepTalkPara = ` ${userName}, meet ${userName} - an really important person.
-  //   ${userName}, you're a big thinker so always thonk big.Think big about everything.
-  //   You've got an plenty of ability to do first class job so always do first class job
-
-  //   ${userName} you born with lot of talents , you are an achiever, you are an
-  //   motivator, you are an inspiration,You always thinks positively.
-
-  //   ${userName} You always believe in happiness , progress, prosperity. So,
-  //   talk only happiness,
-  //   talk only progress,
-  //   talk only prosperity
-
-  //  You have lots of drive ${userName} lots of drive so put that drive to work .
-  //  Nothing can stop you ${userName}, nothing
-
-  //   ${userName} you are an enthusiastic,let your enthusiasm show through.
-  //   you look good ${userName} and you feel good stay that way
-
-  //  ${userName} you were a great fellow yesterday and you are going to be an even
-  //   greater fellow today.
-  //   Now go to it  ${userName}.
-  //   Go forward...!!!`;
 
   return (
     <div className="h-1/2 w-full rounded-xl  py-4 text-black  md:max-lg:py-1 md:max-lg:backdrop-blur-none">
@@ -127,9 +103,3 @@ function PepTalk() {
   );
 }
 export default PepTalk;
-
-{
-  /* {pepTalkPara.split("\n\n").map((paragraph) => (
-            <ShowPepTalk para={paragraph} key={name} />
-          ))} */
-}

@@ -22,9 +22,6 @@ function reducer(state, action) {
   }
 }
 function UserProvider({ children }) {
-  // const [passwordChange, setPasswordChange] = useState(false);
-
-  // let toggle = () => setPasswordChange((c) => !c);
   const [{ passwordChange }, dispatch] = useReducer(reducer, initialState);
 
   function updatePassword(data) {

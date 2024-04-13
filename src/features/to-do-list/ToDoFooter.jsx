@@ -1,11 +1,9 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 
-//import { formatDate } from "date-fns";
 import { format } from "date-fns";
 import { useSearchParams } from "react-router-dom";
 
-//grid-cols-[90px_90px_90px_90px_90px_90px_90px]
 function ToDoFooter({ dates }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentDate = searchParams.get("date");

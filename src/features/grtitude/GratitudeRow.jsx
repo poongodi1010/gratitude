@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-//import { useState } from "react";
 import CreateGratitudeEntry from "./CreateGratitudeEntry";
 import { useDeleteGratitude } from "./useDeleteGratitude";
 import { FormattedCreatedDate } from "../../utils/helpers";
@@ -9,13 +8,11 @@ import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import Menus from "../../ui/Menus";
 import { useState } from "react";
-//import { FormattedDate } from "../../utils/helpers";
 
 function GratitudeRow({ grat }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const { isDeleting, deleteGratitude } = useDeleteGratitude();
-  //const [editSession, setEditSession] = useState(false);
-  // todayDate = FormattedDate();
+
   const arrayOfContent = grat.gratitude.trim().split(/\s+/);
   let date = FormattedCreatedDate(grat.created_at);
   let modified_date = FormattedCreatedDate(grat.modified_date);
@@ -43,7 +40,6 @@ function GratitudeRow({ grat }) {
                 : "... "
               : ""}
           </button>
-          {/* {grat.gratitude} */}
         </p>
         <div className="flex justify-between">
           <Modal>
@@ -59,7 +55,6 @@ function GratitudeRow({ grat }) {
               </Menus.List>
 
               <Modal.Window name="edit">
-                {/* //{editSession && <CreateGratitudeEntry gratitudeToEdit={grat} />} */}
                 <CreateGratitudeEntry gratitudeToEdit={grat} />
               </Modal.Window>
 

@@ -1,10 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 import { getToDoListByDate } from "../../services/apiToDo";
-//import { useParams } from "react-router-dom";
 
 export function useCopyToDo() {
-  //const queryClient = useQueryClient();
   const [searchParams] = useSearchParams();
   const filterValue = searchParams.get("date");
 

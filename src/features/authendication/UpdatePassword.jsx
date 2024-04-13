@@ -1,4 +1,3 @@
-//import { updateUser } from "../../services/apiAuth";
 import { useForm } from "react-hook-form";
 import { useUpdateUser } from "./useUpdateUser";
 
@@ -36,7 +35,7 @@ function UpdatePassword() {
             },
           })}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  max-[767px]:text-[1.5rem] px-4 py-4  font-sans text-2xl text-black !outline-none max-[767px]:w-full"
+          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4 font-sans  text-2xl text-black !outline-none max-[767px]:w-full max-[767px]:text-[1.5rem]"
         />
       </div>
       <div className="mt-8 ">
@@ -58,12 +57,12 @@ function UpdatePassword() {
               getValues().password === value || "Passwords need to match",
           })}
           disabled={isUpdating}
-          className="mt-4 w-[70%]  rounded-xl bg-gray-300  max-[767px]:text-[1.5rem] px-4 py-4  font-sans text-2xl text-black !outline-none max-[767px]:w-full"
+          className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4 font-sans  text-2xl text-black !outline-none max-[767px]:w-full max-[767px]:text-[1.5rem]"
         />
       </div>
 
       <button
-        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 max-[767px]:text-[1.5rem] py-4 text-white max-[767px]:w-full "
+        className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 py-4 text-white max-[767px]:w-full max-[767px]:text-[1.5rem] "
         disabled={isUpdating}
       >
         Update Password
@@ -73,56 +72,3 @@ function UpdatePassword() {
 }
 
 export default UpdatePassword;
-
-/* <form className="mt-16" onSubmit={handleSubmit(onSubmit)}>
-{/* <div> *
-<div className="mb-8">
-  <div>
-    <label htmlFor="password" className="mr-8 text-3xl font-semibold">
-      Password{" "}
-    </label>
-  </div>
-  <input
-    type="password"
-    name="password"
-    id="password"
-    disabled={isUpdating}
-    className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
-    {...register("password", {
-      required: "This field is required",
-      minLength: {
-        value: 8,
-        message: "Password needs a minimum of 8 characters",
-      },
-    })}
-  />
-</div>
-
-<div className="mr-8 text-3xl font-semibold">
-  <div>
-    <label htmlFor="confirmpassword" className="mr-8">
-      Confirm Password{" "}
-    </label>
-  </div>
-  <input
-    type="password"
-    name="confirmpassword"
-    id="confirmpassword"
-    disabled={isUpdating}
-    className="mt-4 w-[70%]  rounded-xl bg-gray-300  px-4 py-4  font-sans text-2xl  text-black !outline-none"
-    {...register("confirmpassword", {
-      required: "This field is required",
-      validate: (value) =>
-        getValues().password === value || "Passwords need to match",
-    })}
-  />
-</div>
-
-<button
-  className="mt-8 w-[70%] rounded-xl bg-blue-400 px-4 py-2 text-white"
-  disabled={isUpdating}
->
-  Update Password
-</button>
-{/* </div> */
-// </form> */

@@ -1,11 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useReducer } from "react";
-//import axios from "axios";
-// https//zenquotes.io/api/quotes/keyword=confidence
-// https://zenquotes.io/api/today
 
-//const BASE_URL = "https://zenquotes.io/api";
-//const header = new Headers({ "Access-Control-Allow-Origin": "*" });
 const QuotesContext = createContext();
 
 const initialState = {
@@ -54,7 +49,6 @@ function QuotesProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       // const res = await fetch("http://localhost:5000");
-      // const res = await fetch("https://backendserver-production-af63.up.railway.app");
       const res = await fetch(
         "https://backendserver-production-af63.up.railway.app",
       );
@@ -68,18 +62,10 @@ function QuotesProvider({ children }) {
       });
     }
   }
-  //     fetchDailyQuotes();
-  //   }, []);
-  // function fetchDailyQuotes() {
-  //   axios
-  //     .get("http://localhost:5000/getData")
-  //     .then((data) => console.log("data", data));
-  // }
 
   async function getQuotesFromKeyword(keyword) {
     dispatch({ type: "loading" });
     try {
-      // const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
       // const url = `http://localhost:5000/${keyword}`;
       const url = `https://backendserver-production-af63.up.railway.app/${keyword}`;
       const res = await fetch(url);

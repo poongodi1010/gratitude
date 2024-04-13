@@ -1,5 +1,4 @@
 import { useToDoList } from "./useToDoList";
-//import { useCopyToDo } from "./useCopyToDO";
 
 import ToDoRowForSmall from "./ToDoRowForSmall";
 //
@@ -10,10 +9,6 @@ function ToDoTableForSmall() {
   return (
     <div className="my-4 ">
       <header className=" grid grid-cols-[6.5fr_5fr_4fr_4fr_1fr] justify-center px-4 py-4 text-[0.9rem] font-semibold uppercase text-black ">
-        {/* <div className="hidden text-center">
-          {/* <label htmlFor="checkbox"></label>
-            <input type="checkbox" id="checkbox" /> *
-        </div> */}
         <div className="pl-2">Task</div>
         <div className="pl-2">Deadline</div>
         <div className=" pl-6 max-[374px]:pl-2">Priority</div>

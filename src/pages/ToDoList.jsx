@@ -2,17 +2,14 @@ import ToDoTable from "../features/to-do-list/ToDoTable";
 import AddToDo from "../features/to-do-list/AddToDo";
 import ToDoOperations from "../features/to-do-list/ToDoOperations";
 import Footer from "../ui/Footer";
-//import Datepicker from "../ui/Datepicker";
-//import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import ToDoTableByDate from "../features/to-do-list/ToDoTableByDate";
 import { useEffect, useState } from "react";
 import AddToDoForSmall from "../features/to-do-list/AddToDoForSmall";
 import ToDoTableForSmall from "../features/to-do-list/ToDoTableForSmall";
-//import { useWindow } from "../context/WindowContext";
-//import { useParams } from "react-router-dom";
-//import { height, width } from "../utils/constants";
+
 function ToDoList() {
+  //to get the screen width
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -44,7 +41,7 @@ function ToDoList() {
       ) : (
         <div>
           <div className="flex justify-between ">
-            <AddToDoForSmall width={width} />
+            <AddToDoForSmall />
             <ToDoOperations />
           </div>
           {date ? <ToDoTableByDate /> : <ToDoTableForSmall />}

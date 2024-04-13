@@ -28,7 +28,6 @@ function SortByForSmall({ options }) {
     setIsVisible(false);
   }
   return (
-    // <div className=" my-6 grid w-full items-center rounded-xl  bg-[#43766C]  px-2  py-4">
     <div ref={ref}>
       <button
         onClick={() => setIsVisible((v) => !v)}
@@ -40,11 +39,8 @@ function SortByForSmall({ options }) {
         <select
           onChange={handleChange}
           value={sortBy}
-          // type="white"
           className="absolute right-[8px] top-[140px] w-[65px] rounded-xl  border-none bg-[#43766C] text-[1rem]  text-white   !outline-none hover:bg-none "
         >
-          {/* <ul className="absolute right-[8px] top-[140px] rounded-xl bg-[#43766C]  px-4 text-white"></ul> */}
-
           {options.map((option) => (
             <option
               value={option.value}

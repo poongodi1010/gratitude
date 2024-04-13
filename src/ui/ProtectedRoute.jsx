@@ -1,17 +1,9 @@
 /* eslint-disable react/prop-types */
-import styled from "styled-components";
 import { useUsers } from "../features/authendication/useUsers";
 import Spinner from "./Spinner";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-const FullPage = styled.div`
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-grey-50);
-`;
 function ProtectedRoute({ children }) {
   const navigate = useNavigate();
   //Load the authendicated user
@@ -30,9 +22,9 @@ function ProtectedRoute({ children }) {
   //while loading show a spinner
   if (!isAuthenticated && !isLoading)
     return (
-      <FullPage>
+      <div className="flex h-screen items-center justify-center bg-[#111827]">
         <Spinner />
-      </FullPage>
+      </div>
     );
   //if so render app
 

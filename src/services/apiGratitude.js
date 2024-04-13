@@ -30,11 +30,6 @@ export async function createEditGratitude(newData, id) {
       .order("created_at", { ascending: true });
 
   const { data, error } = await query.select().single();
-  // const { data, error } = await supabase
-  //   .from("gratitude")
-  //   .insert([{ ...newData }])
-  //   .select()
-  //   .single();
 
   if (error) {
     console.Error(error);

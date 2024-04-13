@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 function HomeListDisplay({ post }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  //const navigate = useNavigate();
+
   const arrayOfContent = post.fields.blogSummary.trim().split(/\s+/);
   return (
     <section key={post.sys.id} className="  m-auto grid grid-cols-1  pb-2  ">
@@ -13,13 +13,10 @@ function HomeListDisplay({ post }) {
             src={post.fields.blogImage.fields.file.url}
             title=""
             alt={post.fields.blogTitle}
-            // width="578"
-            // height="291"
             className="h-full w-full "
           />
 
           <p>
-            {/* By <a href="https://thecodeangle.com/">author</a> Date{" "} */}
             <span></span>
             <small>
               {new Intl.DateTimeFormat("en-GB", {
@@ -51,7 +48,7 @@ function HomeListDisplay({ post }) {
                 : "Read More "
               : ""}
           </Link>
-          {/* </button> */}
+
         </div>
       </div>
     </section>

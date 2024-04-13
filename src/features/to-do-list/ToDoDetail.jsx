@@ -24,7 +24,7 @@ function ToDoDetail() {
               </p>
             </span>
           </header>
-          {/* <hr /> */}
+
           <section className="m-4  ">
             <p className="my-6  max-[767px]:text-2xl">
               <span className="mr-2">Task - </span> {list.tasks}
@@ -37,7 +37,6 @@ function ToDoDetail() {
           <div className="mt-14 grid  grid-cols-[12%_10%] justify-start gap-[90rem] max-[767px]:grid-cols-[4fr_4fr] max-[767px]:gap-[10rem] ">
             {list.status === "new" && (
               <button
-                // onClick={() => editStatus(toDoId, status)}
                 onClick={() =>
                   editStatus({
                     newStatus: { ...toDo, status: "in-progress" },

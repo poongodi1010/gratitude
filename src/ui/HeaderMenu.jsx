@@ -1,25 +1,9 @@
-//import styled from "styled-components";
-//import ButtonIcon from "./ButtonIcon";
-//import Logout from "../features/authendication/Logout";
-//import DarkmodeToggle from "./DarkmodeToggle";
-//import { useNavigate } from "react-router-dom";
-
-//import { HiOutlineUser } from "react-icons/hi2";
-import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUsers } from "../features/authendication/useUsers";
 import Logout from "../features/authendication/Logout";
-//import { useState } from "react";
-//import Modal from "./Modal";
-//import Logout from "../features/authendication/Logout";
-// const StyledHeaderMenu = styled.ul`
-//   display: flex;
-//   gap: 0.4rem;
-// `;
-
+import { useEffect, useRef } from "react";
 /* eslint-disable react/prop-types */
 function HeaderMenu({ setIsVisisble, isVisible }) {
-  //const navigate = useNavigate();
   const { user } = useUsers();
   const name = user.user_metadata.fullName;
   const navigate = useNavigate();
@@ -47,22 +31,14 @@ function HeaderMenu({ setIsVisisble, isVisible }) {
   return (
     <div
       className=" absolute right-[100px] font-[PT-serif] text-3xl font-bold max-[767px]:right-[10px] "
-      // className=" absolute right-[100px] font-[PT-serif] text-3xl font-bold max-[424px]:right-[10px]  sm:right-[30px] "
       ref={ref}
     >
-      {/* <li>
-        <button className="mx-2 rounded-full border-none bg-gray-200 p-[1.5rem]">
-          <HiOutlineUser />
-        </button>
-      </li> */}
-
       <button
         className=" relative mx-4  h-full w-full cursor-pointer pr-3.5 text-left font-[PT-serif] text-3xl font-bold text-red-800 !outline-none transition-all duration-300 hover:text-yellow-600  focus:text-yellow-800 max-[767px]:h-full max-[767px]:w-full max-[767px]:text-[1.7rem]  [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
         onClick={() => setIsVisisble((v) => !v)}
       >
         {name}
       </button>
-      {/* <div className="absolute right-[10px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] px-8 text-white"> */}
       {isVisible ? (
         <ul className="absolute right-[3px] top-[57px] z-50 my-4 rounded-xl bg-[#43766C] p-4 px-8 text-center text-white max-[767px]:right-[15px] max-[767px]:top-[50px] max-[767px]:text-[1.2rem] max-[374px]:top-[40px]">
           <li
@@ -77,11 +53,6 @@ function HeaderMenu({ setIsVisisble, isVisible }) {
           </button>
         </ul>
       ) : null}
-      {/* </div> */}
-
-      {/* <li className="mx-2 p-[1.2rem]">
-        <Logout />
-      </li> */}
     </div>
   );
 }

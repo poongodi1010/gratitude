@@ -22,6 +22,7 @@ function FilterForSmall({ filterField, options }) {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const currentFilter = searchParams.get(filterField) || options.at(0).value;
+
   function handleClick(value) {
     searchParams.set(filterField, value);
     if (searchParams.get("page")) searchParams.set("page", 1);
@@ -30,7 +31,6 @@ function FilterForSmall({ filterField, options }) {
   }
 
   return (
-    // <div className="  flex w-full justify-around   rounded-xl  px-2 py-2">
     <div ref={ref} className="mx-2">
       <button
         onClick={() => setIsVisible((v) => !v)}
@@ -44,7 +44,6 @@ function FilterForSmall({ filterField, options }) {
             <li
               key={options.value}
               onClick={() => handleClick(option.value)}
-              //   active={currentFilter === option.value}
               disabled={currentFilter === option.value}
               className="my-[0.15rem] py-1 text-[0.9rem]"
             >

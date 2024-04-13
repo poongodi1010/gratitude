@@ -129,10 +129,6 @@ function CreateToDoListForSmall({ onCloseModal, toDoToEdit = {} }) {
         >
           {editSession ? "Edit" : "Add"}
         </button>
-        {/* <h2 className=" px-2 py-4 text-center text-2xl font-semibold">
-          Do you want to copy the details to other days?
-        </h2>
-        <Datepicker /> */}
       </form>
     </div>
   );

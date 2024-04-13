@@ -7,10 +7,6 @@ function SingleListDisplay({ singleBlogPost }) {
   return (
     <div className=" mx-auto my-4  ">
       <div>
-        {/* <div> */}
-        {/* <h1>Web Dev Blog</h1> */}
-        {/* {singleBlogPost?.items?.map((post) => ( */}
-        {/* //eslint-disable-next-line react/prop-types */}
         <section
           key={singleBlogPost?.sys?.id}
           className="  m-auto grid grid-cols-1  pb-2  "
@@ -19,20 +15,17 @@ function SingleListDisplay({ singleBlogPost }) {
             <HiArrowLeft className="float-left mx-2 my-1 text-3xl font-bold " />
             Back
           </Link>
-          {/* <div className=" relative m-auto grid h-full w-1/2 items-center justify-center sm:w-full sm:items-start"> */}
+
           <div className=" relative m-auto grid h-full w-1/2 items-center justify-center max-[767px]:w-full max-[767px]:px-4">
             <header>
               <img
                 src={singleBlogPost?.fields?.blogImage?.fields?.file?.url}
                 title=""
                 alt={singleBlogPost?.fields?.blogTitle}
-                // width="578"
-                // height="291"
                 className="h-full w-full "
               />
 
               <p>
-                {/* By <a href="https://thecodeangle.com/">author</a> Date{" "} */}
                 <span></span>
                 <small>
                   {singleBlogPost?.fields?.blogDate === undefined
@@ -53,17 +46,7 @@ function SingleListDisplay({ singleBlogPost }) {
             </div>
           </div>
         </section>
-        {/* // ))} */}
       </div>
-
-      {/* <div>
-    <div>
-      <div>
-        <a href="http://twitter.com/thecodeangle">Twitter</a>
-      </div>
-    </div>
-  </div> */}
-      {/* </div> */}
     </div>
   );
 }

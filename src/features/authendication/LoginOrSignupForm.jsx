@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 
 function LoginOrSignupForm() {
   const [signUp, setSignUp] = useState(false);
-  //const navigate = useNavigate();
   function handleSignUp() {
     setSignUp((s) => !s);
   }
@@ -49,10 +48,4 @@ function LoginOrSignupForm() {
   );
 }
 
-{
-  /* <NavLink to="/gratitude" className="link">
-{/* <HiOutlineCalendarDays /> *
-<span>Gratitude</span>
-</NavLink> */
-}
 export default LoginOrSignupForm;

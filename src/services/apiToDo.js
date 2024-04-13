@@ -70,13 +70,6 @@ export async function addToDoList(newData) {
     .insert([{ ...newData, user_id: user.id }])
     .select()
     .single();
-  // .eq("user_id", user.id);
-
-  // const { data, error } = await supabase
-  //   .from("gratitude")
-  //   .insert([{ ...newData }])
-  //   .select()
-  //   .single();
 
   if (error) {
     console.Error(error);
@@ -87,7 +80,6 @@ export async function addToDoList(newData) {
 }
 
 export async function editToDoStatus(newStatus, id) {
-  // if (id) {
   const { data, error } = await supabase
     .from("to_do")
     .update([{ status: newStatus.status }])
@@ -99,7 +91,6 @@ export async function editToDoStatus(newStatus, id) {
     throw new Error("Status is not changing");
   }
   return data;
-  // }
 }
 
 export async function deleteToDo(id) {

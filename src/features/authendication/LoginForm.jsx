@@ -1,4 +1,3 @@
-//import { useForm } from "react-hook-form";
 import { HiEye, HiEyeSlash } from "react-icons/hi2";
 import { useLogin } from "./useLogin";
 import { useState } from "react";
@@ -7,8 +6,6 @@ import { useQueryClient } from "@tanstack/react-query";
 // Email regex: /\S+@\S+\.\S+/
 
 function LoginForm() {
-  //const [email, setEmail] = useState("");
-  //const [password, setPassword] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const { login, isLoading } = useLogin();
   const queryClient = useQueryClient();
@@ -39,8 +36,6 @@ function LoginForm() {
           type="email"
           name="email"
           placeholder="Enter your Email"
-          // value={email}
-          // onChange={(e) => setEmail(e.target.value)}
           disabled={isLoading}
           {...register("email", {
             required: "Please enter email ",
@@ -59,27 +54,13 @@ function LoginForm() {
                 name="password"
                 type={isVisible ? "text" : "password"}
                 placeholder="Enter your Password"
-                // value={password}
-                // onChange={(e) => setPassword(e.target.value)}
                 disabled={isLoading}
                 {...register("password", {
                   required: "Please enter password ",
                 })}
                 className=" rounded-xl bg-gray-200 py-4  pl-8 pr-12 text-center font-sans text-lg text-black !outline-none max-[767px]:py-2 max-[767px]:pl-10 max-[767px]:pr-[4.8rem] max-[767px]:text-[1rem]   "
               />
-              {/* <span
-              onClick={handleToggle}
-              value={isVisible}
-              className=" absolute   left-[62%] top-[50%] flex -translate-y-[50%] items-center  px-8 py-4 max-[767px]:pl-4 max-[767px]:pr-0  "
-            >
-              {/* <HiEye /> *
-              {isVisible ? (
-                <HiEye className="cursor-pointer " />
-              ) : (
-                <HiEyeSlash className=" w-full cursor-pointer" />
-              )}
-            </span> 
-            max-[767px]:${errors?.email?.message ? "top-[10%]" : "top-[30px]"}*/}
+
               <span
                 onClick={handleToggle}
                 value={isVisible}
@@ -98,7 +79,6 @@ function LoginForm() {
           {errors?.password?.message}
         </p>
       </div>
-      {/* absolute top-[50%]    -translate-y-[50%]*/}
       <div className=" p-4 text-center max-[374px]:p-1">
         <button
           disabled={isLoading}

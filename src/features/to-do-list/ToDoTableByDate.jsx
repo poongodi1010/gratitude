@@ -13,10 +13,7 @@ function ToDoTableByDate() {
   return (
     <div className="my-12 ">
       <header className="grid grid-cols-6 justify-center py-4 text-2xl font-bold uppercase text-black">
-        <div className="text-center">
-          {/* <label htmlFor="checkbox"></label>
-      <input type="checkbox" id="checkbox" /> */}
-        </div>
+        <div className="text-center"></div>
         <div className=" text-center">Task</div>
         <div className=" text-center">Deadline</div>
         <div className="text-center">Priority</div>

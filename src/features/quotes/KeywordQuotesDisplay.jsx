@@ -16,7 +16,6 @@ function KeywordQuotesDisplay() {
   }
   return (
     <div className="text-center">
-      {/* <h1>{keywordQuote.map((quote) => quote.q)}</h1> */}
       <Carousel keywordQuote={keywordQuote} />
 
       <button

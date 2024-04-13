@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAddToDo } from "./useAddToDo";
 import { useEditToDoStatus } from "./useEditToDoStatus";
 import { useQueryClient } from "@tanstack/react-query";
-//import Datepicker from "../../ui/Datepicker";
-//import { useUsers } from "../authendication/useUsers";
+
 
 function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
   const { id: editId, ...editValues } = toDoToEdit;
@@ -131,10 +130,6 @@ function CreateToDoList({ onCloseModal, toDoToEdit = {} }) {
         >
           {editSession ? "Edit" : "Add"}
         </button>
-        {/* <h2 className=" px-2 py-4 text-center text-2xl font-semibold">
-          Do you want to copy the details to other days?
-        </h2>
-        <Datepicker /> */}
       </form>
     </div>
   );

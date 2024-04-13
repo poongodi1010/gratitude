@@ -5,16 +5,11 @@ import Menus from "../../ui/Menus";
 import { HiEye, HiPencil, HiTrash } from "react-icons/hi2";
 import CreateToDoListForSmall from "./CreateToDoListForSmall";
 import { useNavigate } from "react-router-dom";
-//import { useState } from "react";
-//import { useEditToDoStatus } from "./useEditToDoStatus";
 import ConfirmDelete from "../../ui/ConfirmDelete";
-//import { deleteToDo } from "../../services/apiToDo";
 import { useDeleteToDo } from "./useDeleteToDo";
 
 function ToDoRowForSmall({ list }) {
   const navigate = useNavigate();
-  //   const [checked, setChecked] = useState(false);
-  //   const { isEditing, editStatus } = useEditToDoStatus();
   const { isDeleting, deleteToDo } = useDeleteToDo();
   const id = list.id;
 
@@ -32,23 +27,7 @@ function ToDoRowForSmall({ list }) {
         <h2>{list.priority}</h2>
       </div>
       <div className=" text-center">
-        <h2>
-          {list.status}
-          {/* <label htmlFor="status"></label>
-
-          <select
-            id="status"
-            name="status"
-            type="text"
-            onChange={handleStatus}
-            value={statusOption}
-            disabled={isEditing}
-          >
-            <option value="New">New</option>
-            <option value="In-Progress">In Progress</option>
-            <option value="Completed">Done</option>
-          </select> */}
-        </h2>
+        <h2>{list.status}</h2>
       </div>
       <div className="hidden text-center">
         <h2>{list.date}</h2>
@@ -74,7 +53,6 @@ function ToDoRowForSmall({ list }) {
             </Menus.List>
 
             <Modal.Window name="edit">
-              {/* //{editSession && <CreateGratitudeEntry gratitudeToEdit={grat} />} */}
               <CreateToDoListForSmall toDoToEdit={list} />
             </Modal.Window>
 

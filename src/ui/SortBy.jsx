@@ -13,7 +13,6 @@ function SortBy({ options }) {
       <select
         onChange={handleChange}
         value={sortBy}
-        // type="white"
         className="rounded-xl border-none bg-[#43766C] p-2  text-white !outline-none hover:bg-none sm:p-0"
       >
         {options.map((option) => (

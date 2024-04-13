@@ -1,5 +1,3 @@
-//import { differenceInDays, formatDistance, parseISO } from "date-fns";
-//import { ISOStringFormat } from "date-fns";
 import { format } from "date-fns";
 import { addDays } from "date-fns";
 // Supabase needs an ISO date string. However, that string will be different on every render because the MS or SEC have changed, which isn't good. So we use this trick to remove any time
@@ -14,11 +12,6 @@ export const getToday = function (options = {}) {
   return today.toISOString();
 };
 
-// const { format } = require("date-fns");
-// const result = format(new Date(2014, 6, 2), "do 'de' MMMM yyyy", {
-//   locale: eoLocale,
-// });
-
 export const FormattedDate = () => {
   const currentDate = new Date();
   const formattedDate = format(currentDate, "MMM do, yyyy");
@@ -26,12 +19,9 @@ export const FormattedDate = () => {
 };
 
 export const SequenceDate = (currentDate) => {
-  //const currentDate = new Date();
-  //let n = 0;
   let futureDate = [];
   for (let n = 0; n < 7; n++) {
     futureDate = format(addDays(currentDate, n), "MM dd");
-    //n++;
 
     return futureDate;
   }

@@ -1,9 +1,5 @@
-//import { format } from "date-fns";
 import { addDays, format } from "date-fns";
 import ToDoFooter from "../features/to-do-list/ToDoFooter";
-//import { SequenceDate } from "../utils/helpers";
-
-//let sequenceDate = [];
 
 function Footer() {
   let futureDate1 = [];
