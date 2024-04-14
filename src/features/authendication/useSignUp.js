@@ -12,7 +12,7 @@ export function useSignup() {
       queryClient.setQueryData(["user"], user.user);
       navigate("/home", { restart: true });
       toast.success(
-        "Acount created successfully. Please verify the user's email address",
+        "Acount created successfully",
       );
     },
   });
